@@ -19,8 +19,9 @@ Design Strategy: As below
 TransactionMainRunner is the main entry point for this application having the main method.
 It calls CommandLineParser (a helper class) to parse the command line arguments.
 Then TransactionMainRunner calls the TransactionService class (Business service) to calculate the relative account balance and no. of transactions.
-TransactionService calls the TransactionDataManager to fetch transaction details from underlying datasource (file).
-TransactionDataManager parses the prepouulated file (TransactionRecords.csv) and returns the transaction data.
+TransactionService calls the TransactionDataManager to fetch transaction details from underlying datasource (file).It applies 
+all the business rules/requirements to calculate the account balance and transactions count.
+TransactionDataManager parses the prepopulated file (TransactionRecords.csv) and returns the transaction data.
 
 Technology : Have used Java 8 version for implementation, have not used Spring,Hibernate, in memory db etc for the sake of simplicity and 
 not to overkill.
